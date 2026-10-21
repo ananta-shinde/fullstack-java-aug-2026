@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        section{
+            height: 100vh;
+        }
+        #hero{
+            background-color: bisque;
+            display: flex;
+            align-items: center;
+            padding: 25px;
+        }
+        .hero-container img{
+              border-radius: 50%;
+              width: 500px;
+              height: 500px;
+        }
+        #features{
+            display: flex;
+            background-color: brown;
+            align-items: center;
+            justify-content: center;
+            gap:25px;
+            color: white;
+            padding: 25px;
+        }
+        #features div{
+            /* width: 30%; */
+            /* border:1px solid; */
+            height: fit-content;
+            padding: 25px;
+            
+        }
+    </style>
+</head>
+<body>
+    <section id="hero">
+        <div style="width: 50%;padding: 25px;">
+            <h1>Welcome to Fullstack development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id neque quibusdam possimus consequatur, iusto dolorum ut? Distinctio aut repellendus officia beatae, error nisi, 
+                saepe dolores ducimus unde esse, debitis tempora?</p>
+        </div>
+        <div class="hero-container" style="width:50%">
+            <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgakH_tLmm8TjnTsdW37Pv-d5wdcL3KZycKhNeo8JlONtPcujikos9Pv8&s=10"/>
+        </div>
+    </section>
+    <section id="features">
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, earum quibusdam in ipsum quasi accusamus dolorum sunt ad odio autem quae incidunt aperiam reprehenderit numquam impedit culpa magni illum sint?</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, earum quibusdam in ipsum quasi accusamus dolorum sunt ad odio autem quae incidunt aperiam reprehenderit numquam impedit culpa magni illum sint?</p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, earum quibusdam in ipsum quasi accusamus dolorum sunt ad odio autem quae incidunt aperiam reprehenderit numquam impedit culpa magni illum sint?</p>
+        </div>
+        
+    </section>
+    <section></section>
+</body>
+</html>

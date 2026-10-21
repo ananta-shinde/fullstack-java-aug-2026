@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User details</title>
+</head>
+<body>
+    <label>Fullname:</label>
+    <p id="fullname"></p>
+    <label>Email:</label>
+    <p id="email"></p>
+    <label>Password:</label>
+    <p id="password"></p>
+</body>
+<script>
+
+    var query = window.location.search;
+    console.log(query)
+
+    var userdata = new URLSearchParams(query);
+    console.log(userdata.get("fullname"))
+
+    fullname.innerHTML = userdata.get("fullname")
+    email.innerHTML = userdata.get("email")
+    password.innerHTML = userdata.get("password")
+
+</script>
+</html>

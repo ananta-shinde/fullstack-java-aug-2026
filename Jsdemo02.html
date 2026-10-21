@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form> -->
+        <input id="fruitName" type="text" placeholder="enter fruit name"/>
+        <input type="number" id="price" placeholder="price"/>
+        <input type="submit" onclick="handleSave()"/>
+    <!-- </form> -->
+</body>
+<script>
+    const fruits = []
+    // for(i=0;i<5;i++){
+    //     fruit = prompt("enter fruit name") 
+    //     fruits.push(fruit)
+    // }
+
+    function handleSave(){
+        fruit = {}
+        fruit.name = fruitName.value
+        fruit.price = price.value
+        fruits.push(fruit)
+        printData()
+    }
+
+   function printData(){
+      console.log(fruits)
+      
+   }
+
+   for(i=0;i<fruits.length;i++){
+         f = fruits[i]
+         if(f.name == "Mango"){
+            console.log(f.price)
+         }
+          
+   }
+
+   
+
+
+   
+</script>
+</html>

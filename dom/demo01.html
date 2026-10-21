@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+        <title>DOM | Demo 01</title>
+        <style>
+                /* styles are placed here ....... */
+                input,select {
+                        width: 100%;
+                        box-sizing: border-box;
+                        padding: 10px;
+                        margin: 10px 0;
+                }
+                input[type="submit"]{
+                        background-color: black;
+                        color: white;
+                }
+                .form-container{
+                        max-width: 600px;
+                        margin: 0 auto;
+                }
+        </style>
+</head>
+
+<body>
+        <section class="form-container">
+                <h4>Basic Details :</h4>
+              <input id="fullname" type="text" placeholder="enter your name" />
+              <input id="email" type="email" placeholder="enter your email">
+              <input id="contact" type="number" placeholder="enter your contact">
+              <input id="localAddress" type="text" placeholder="enter local address">
+              <input id="landmark" type="text" placeholder="enter landmark">
+              <select id="city">
+                <option> -- select your city --</option>
+                   <option value="csn">CSN</option>
+                   <option value="mumbai">MUMBAI</option>
+                   <option value="pune">PUNE</option>
+                   <option value="nagpur">NAGPUR</option>
+              </select>
+              <select id="state">
+                <option> -- select your state --</option>
+                   <option value="">MH</option>
+                   <option value="">UP</option>
+                   <option value="">HP</option>
+                   <option value="">AP</option>
+              </select>
+              <input id="pincode" type="number" placeholder="enter pincode">
+              <input type="submit" onclick="handleSubmit()">
+              <button onclick="printData()">printData</button>
+        </section>
+</body>
+<script>
+     users = []  // array
+     function  handleSubmit(){
+        userdata = {}  // json
+        // username = fullname.value
+        //userdata.push(fullname.value)
+        // userdata.push(email.value)
+        // userdata.push(contact.value)
+        // userdata.push(localAddress.value)
+        // userdata.push(landmark.value)
+        // userdata.push(city.value)
+        // userdata.push(state.value)
+        // userdata.push(pincode.value)
+
+        userdata.name = fullname.value
+        userdata.email = email.value
+        userdata.contact = contact.value
+        userdata.localAddress = localAddress.value
+        userdata.landmark = landmark.value
+        userdata.city = city.value
+        userdata.state = state.value
+        userdata.pincode = pincode.value
+        users.push(userdata)
+        
+     }
+
+     function printData(){
+       
+        console.log(users)
+     }
+</script>
+
+</html>

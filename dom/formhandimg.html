@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>User Registration form</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #form-container{
+            height: 100vh;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        form{
+            background-color: brown;
+            padding: 25px;
+            width:50%;
+            height: fit-content;
+            text-align: center;
+        }
+        form input{
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        form input[type="submit"]{
+                 background-color: black;
+                 color:white;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="form-container">
+      
+        <form onsubmit="handlesubmit(event)">
+            <input type="text" placeholder="your full name" name="fullname"  required>
+            <input type="email" placeholder="your email" name="email" required>
+            <input type="password" placeholder="your password" name="password" required>
+            <input type="password" placeholder="confirm your password" name="confirmPassword" required>
+            <input type="submit" value="create my account">
+        </form>
+    </section>
+    <section id="userdata">
+       
+    </section>
+</body>
+<script>
+
+    const userlist  = []
+
+    function handlesubmit(event){
+         event.preventDefault();
+         const formdata = new FormData(event.target)
+
+         const user = {}
+         user.fullname = formdata.get("fullname")
+         user.email = formdata.get("email")
+         user.password = formdata.get("password")
+         userlist.push(user)
+    }
+
+    function loadUserlist(){
+        
+        userdata.innerHTML = ""
+        for(i=0;i<userlist.length;i++){
+            userdata.innerHTML = userdata.innerHTML  + `
+            <label>Fullname:</label>
+            <p id="fullname">${userlist[i].fullname}</p>
+            <label>Email:</label>
+            <p id="email">${userlist[i].email}</p>
+            <label>Password:</label>
+            <p id="password">${userlist[i].password}</p>
+            `
+        }
+    }
+
+
+</script>
+</html>

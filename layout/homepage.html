@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px;
+            border-bottom:1px solid slategray ;
+            height: 80px;
+        }
+        nav #search-container{
+            width: 50%;
+        }
+        #search-container input{
+            width: 100%;
+            padding: 12px;
+        }
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            /* border: 1px solid; */
+            width: fit-content;
+            gap:25px
+        }
+
+        .contegory-list-container{
+            display: flex;
+            gap:25px;
+            padding: 25px 100px ;
+            border-bottom: 1px solid;
+        }
+        .category-list-item{
+            border: 1px solid lightgray;
+            padding: 2px 20px;
+        }
+        .product-list-item{
+            width: 18rem;
+            border: 1px solid;
+            padding: 10px;
+        }
+        .product-list-item img{
+            width: 100%;
+        }
+        .product-list-container{
+            display: flex;
+            gap:25px;
+           
+        }
+        .form-container{
+            padding: 25px 100px;
+            background-color: bisque;
+
+        }
+        .form-container form{
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            padding: 10px 25px;
+        }
+        .form-container input,textarea{
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h3>LKV Travels</h3>
+        <div id="search-container">
+             <input type="text" placeholder="search for products"/>
+        </div>
+        <ul>
+            <li>Hotels</li>
+            <li>Bus</li>
+            <li>Holiday packages</li>
+        </ul>
+    </nav>
+    <section class="contegory-list-container">
+        <div class="category-list-item">
+            <h4>Mobiles</h4>
+        </div>
+        <div class="category-list-item">
+            <h4>Home appliances</h4>
+        </div>
+        <div class="category-list-item">
+            <h4>Refrigerators</h4>
+        </div>
+        <div class="category-list-item">
+            <h4>Sound system</h4>
+        </div>
+    </section>
+    <section style=" padding: 25px 100px ;">
+        <h4>Todays top deals</h4>
+        <div class="product-list-container">
+            <div class="product-list-item">
+                  <img src="C:\training\fullstack-java-aug-2026\chris-liverani-oCsaxvGCehM-unsplash.jpg"/>
+                  <h4>Product Title</h4>
+                  <p>MRP : Rs.2500</p>
+            </div>
+              <div class="product-list-item">
+                  <img src="C:\training\fullstack-java-aug-2026\chris-liverani-oCsaxvGCehM-unsplash.jpg"/>
+                  <h4>Product Title</h4>
+                  <p>MRP : Rs.2500</p>
+            </div>
+        </div>
+    </section>
+    <section class="form-container">
+        <form>
+            <h4>Create your agent account</h4>
+            <input type="text" placeholder="enter your name"/>
+            <input type="email" placeholder="enter your email"/>
+            <input type="text" placeholder="enter your agency name"/>
+            <!-- <input type="text" placeholder="enter your agency address"/> -->
+             <textarea placeholder="address of agency"></textarea>
+             <input type="submit">
+        </form>
+    </section>
+</body>
+</html>
