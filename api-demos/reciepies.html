@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo02</title>
+</head>
+<body>
+    <section id="recipeList">
+        
+    </section>
+</body>
+<script>
+
+   async function loadData(){
+        const response = await fetch("https://dummyjson.com/recipes");
+        const data = await response.json();
+        const recipes = data.recipes
+ 
+
+        for(i=0;i<recipes.length;i++){
+
+            let ingrdientStructure = "";
+            for(j=0;j<recipes[i].ingredients.length;j++){
+              ingrdientStructure =ingrdientStructure + `<li>${recipes[i].ingredients[j]}<li>`
+            }
+            
+         recipeList.innerHTML = recipeList.innerHTML +`<div>
+            <img src="${recipes[i].image}" style="width:250px"/>
+            <h4>${recipes[i].name}</h4>
+            <ul>
+               ${ingrdientStructure}
+            </ul>
+        </div>`
+        }
+
+    }
+
+    loadData()
+</script>
+</html>
