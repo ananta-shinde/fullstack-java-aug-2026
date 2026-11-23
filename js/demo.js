@@ -1,19 +1,25 @@
+var prompt = require('prompt-sync')();
 
-num = 55
-check = null
-if(check == 5){
-    console.log("hello")
-    console.log("world")
-}
-else{
-console.log("pending")
-console.log("done")
+name = prompt("enter your name:")
+
+email = prompt("enter your email:")
+while(!email.includes("@") || !email.endsWith("gmail.com")){
+    console.log("invalid email, please provide a valid email id")
+    email = prompt("enter your email:")
 }
 
-while(num > 0){
-    console.log("this is reapting")
-    num++
+password = prompt("enter your password:")
+while(password.length < 7){
+     console.log("invalid password, please provide minmum 7 character")
+    password = prompt("enter your passowrd:")
 }
 
 
+confirmPassword = prompt("confirm your password:")
+while(password != confirmPassword){
+     console.log("password mismatched")
+    confirmPassword = prompt("confirm your password:")
+}
+
+console.log(name,email,password,confirmPassword)
 
