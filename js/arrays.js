@@ -16,6 +16,7 @@ console.log(numbers.includes(200))
 // books.fill("20",3,4)
 index = books.indexOf(200)
 books.fill(100,index,index+1)
+books[2] = "demo"
 
 console.log(books)
 console.log(books.length)
